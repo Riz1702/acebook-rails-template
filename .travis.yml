@@ -3,6 +3,9 @@ language: ruby
 services:
   - postgresql
 
+before_install:
+  - gem install bundler
+
 before_script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate RACK_ENV=test
