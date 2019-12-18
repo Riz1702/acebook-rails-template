@@ -4,6 +4,8 @@ services:
   - postgresql
 
 before_install:
+  - gem update --system
+  - gem --version
   - gem install bundler
 
 before_script:
