@@ -1,0 +1,24 @@
+language: ruby
+
+services:
+  - postgresql
+
+before_install:
+  - gem update --system --force
+  - gem --version
+  - gem install bundler
+
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate RACK_ENV=test
+  # - psql -c "CREATE USER foo WITH PASSWORD 'bar';" -U postgres
+
+script:
+  — bundle exec rspec
+
+deploy:
+  provider: heroku
+  api_key: 0T6byIQTYpVk1Fs9nz4Cxw
+  app:
+    master: https://github.com/Riz1702/acebook-rails-template
+    production: https://desolate-atoll-44314.herokuapp.com/users/sign_in
