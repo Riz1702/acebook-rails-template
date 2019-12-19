@@ -110,9 +110,10 @@ a:hover {
 }
 
 footer {
-	grid-column: 3;
+	grid-column: 6;
 	grid-row: 6;
 	text-align: center;
+	color: white;
 }
 
 form {
@@ -154,9 +155,4 @@ input[type=submit]:hover {
 	background-color: rgba(255, 255, 255, 0.8);
 	color: #0101f7;
 	border-radius: 25%;
-}
-
-#cop {
-    color:white;
-    margin-left: 2rem;
 }
